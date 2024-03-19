@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/win3"
+    tools:context=".NewMainActivity">
+
+    <!-- FrameLayout to contain the fragments -->
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigationview">
+
+        <!-- Home Fragment -->
+        <fragment
+            android:id="@+id/fragment_home"
+            android:name="com.example.app.Home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_home" />
+
+<!--        &lt;!&ndash; SMS Fragment &ndash;&gt;-->
+<!--        <fragment-->
+<!--            android:id="@+id/fragment_s_m_s"-->
+<!--            android:name="com.example.app.SMS"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:layout="@layout/fragment_s_m_s" />-->
+
+<!--        &lt;!&ndash; Contacts Fragment &ndash;&gt;-->
+<!--        <fragment-->
+<!--            android:id="@+id/fragment_contacts"-->
+<!--            android:name="com.example.app.Contacts"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:layout="@layout/fragment_contacts" />-->
+
+        <!-- Alert Fragment -->
+        <fragment
+            android:id="@+id/fragment_alert"
+            android:name="com.example.app.Alert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_alert" />
+
+    </FrameLayout>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigationview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
